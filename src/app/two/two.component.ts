@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { from } from 'rxjs';
 import { ChannelSubscription } from '../shared/services/channel.subscription.service';
 
@@ -8,21 +8,22 @@ import { ChannelSubscription } from '../shared/services/channel.subscription.ser
   styleUrls: ['./two.component.css']
 })
 export class TwoComponent implements OnInit {
-  USersubmited : boolean|any= false
+  USersubmited: boolean | any = false
 
-  constructor(private subService :ChannelSubscription) { }
+  constructor(private subService: ChannelSubscription) { }
 
   ngOnInit(): void {
 
-    this.subService.newChannelSubscription.subscribe((data:any)=>{
+    this.subService.newChannelSubscription.subscribe((data: any) => {
 
-      this.USersubmited=data;
+      this.USersubmited = data;
 
       console.log(data)
 
-     
 
     })
   }
+
+  @ Input() username:any='rohit' 
 
 }
