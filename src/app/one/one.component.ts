@@ -17,5 +17,9 @@ export class OneComponent implements OnInit {
     this.subService.newChannelSubscription.next(true)
     console.log("sumitted")
   }
+  onSubmitunsub(){
+    this.subService.newChannelSubscription.next(false)
+  }
 
+  pnename:any="raje"
 }
