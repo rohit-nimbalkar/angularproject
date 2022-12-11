@@ -16,7 +16,9 @@ export class TwoComponent implements OnInit {
 
     this.subService.newChannelSubscription.subscribe((data:any)=>{
 
-      this.USersubmited=data
+      this.USersubmited=data;
+
+      console.log(data)
 
      
 
